@@ -1,0 +1,31 @@
+@import "./sass/variables";
+
+.App {
+  $app-gap-pc: 1.5rem;
+  $app-gap-mob: 1rem;
+
+  display: flex;
+  gap: $app-gap-pc;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  background-color: $main-color;
+
+  @media (max-width: $max-phone-width) {
+    flex-direction: column;
+    gap: $app-gap-mob;
+  }
+
+  &:has(.switch-bar:hover) {
+    background-color: green;
+  }
+
+  & > * {
+    width: calc(50% - (#{$app-gap-pc} / 2));
+
+    @media (max-width: $max-phone-width) {
+      width: 100%;
+      height: calc(50% - (#{$app-gap-mob} / 2));
+    }
+  }
+}

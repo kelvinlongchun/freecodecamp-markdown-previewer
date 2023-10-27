@@ -1,0 +1,51 @@
+@import "../../sass/variables";
+
+$code-background-color: rgb(69, 76, 90);
+
+.preview-container {
+  overflow: hidden;
+  border-radius: $border-radius-size;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  #preview {
+    height: 100%;
+    padding: $editor-padding-size;
+    background-color: $sec-color;
+    overflow: auto;
+
+    code {
+      background-color: $code-background-color;
+      padding: 0rem 0.25rem;
+      border-radius: 0.25rem;
+    }
+
+    pre {
+      overflow: auto;
+      padding: 1rem;
+      background-color: $code-background-color;
+    }
+
+    blockquote {
+      border-left: 4px solid $code-background-color;
+      color: $code-background-color;
+      padding-left: 0.75rem;
+      margin-left: 2rem;
+    }
+
+    table {
+      border-collapse: collapse;
+
+      tr {
+        th,
+        td {
+          padding: 0.5rem;
+          border: 1px solid $text-color;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
